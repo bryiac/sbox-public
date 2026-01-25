@@ -575,7 +575,7 @@ public sealed partial class SceneCamera : IDisposable, IManagedCamera
 			var orthoY = (1f - 2f * screenY / screenSize.y) * halfScreenHeight;
 			var forward = Rotation.Forward;
 
-			
+
 			return new Ray
 			{
 				Position = Position + Rotation.Right * orthoX + Rotation.Up * orthoY + forward * ZNear,
