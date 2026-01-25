@@ -470,7 +470,7 @@ public sealed partial class SceneCamera : IDisposable, IManagedCamera
 	/// </summary>
 	internal void OnPreRender( Vector2 size )
 	{
-		Size = size;
+		Size = size * rect.Size;
 
 		ConfigureView( default );
 	}
@@ -575,6 +575,7 @@ public sealed partial class SceneCamera : IDisposable, IManagedCamera
 			var orthoY = (1f - 2f * screenY / screenSize.y) * halfScreenHeight;
 			var forward = Rotation.Forward;
 
+			
 			return new Ray
 			{
 				Position = Position + Rotation.Right * orthoX + Rotation.Up * orthoY + forward * ZNear,
