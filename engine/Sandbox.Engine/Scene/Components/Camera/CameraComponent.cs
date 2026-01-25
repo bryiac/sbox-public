@@ -265,6 +265,7 @@ public sealed partial class CameraComponent : Component, Component.ExecuteInEdit
 		camera.ZNear = ZNear;
 		camera.ZFar = ZFar;
 		camera.Rect = new Rect( Viewport.x, Viewport.y, Viewport.z - Viewport.x, Viewport.w - Viewport.y );
+		camera.Size = ScreenRect.Size;
 		camera.Ortho = Orthographic;
 		camera.OrthoHeight = OrthographicHeight;
 
